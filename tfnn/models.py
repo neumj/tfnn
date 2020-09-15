@@ -1,10 +1,10 @@
 import tensorflow as tf
 from tensorflow.python.framework import ops
-from tfshallow.initializations import create_placeholders
-from tfshallow.initializations import initialize_parameters
-from tfshallow.forward_prop import forward_propagation
-from tfshallow.forward_prop import compute_cost
-from tfshallow.io import random_mini_batches
+from tfnn.initializations import create_placeholders
+from tfnn.initializations import initialize_parameters
+from tfnn.forward_prop import forward_propagation
+from tfnn.forward_prop import compute_cost
+from tfnn.io import random_mini_batches
 import matplotlib.pyplot as plt
 import numpy as np
 

@@ -1,5 +1,5 @@
 import tensorflow as tf
-from tfshallow.forward_prop import forward_propagation_for_predict
+from tfnn.forward_prop import forward_propagation_for_predict
 
 
 def predict(X, parameters):
