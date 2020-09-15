@@ -31,10 +31,10 @@ conda_reqs = [
 test_pkgs = []
 
 setup(
-    name="tfshallow",
+    name="tfnn",
     python_requires='>3.4',
     description="Package for tensor flow neural network experimentation",
-    url="https://github.com/neumj/neural-network",
+    url="https://github.com/neumj/tfnn",
     install_requires=reqs,
     conda_install_requires=conda_reqs,
     test_requires=test_pkgs,

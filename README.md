@@ -1,6 +1,6 @@
-# tfshallow
+# tfnn
 tensor flow learning code
-* includes shallow nn with 3 hidden layers
+* includes n-layer nn
 * softmax output
 * relu activation functions in hidden units
 
@@ -8,6 +8,6 @@ tensor flow learning code
 conda env create -f environment.yml 
 
 # for active development
-conda activate tfshallow
+conda activate tfnn
 
 pip install -e . --no-deps

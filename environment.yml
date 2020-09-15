@@ -1,4 +1,4 @@
-name: tfshallow
+name: tfnn
 channels:
   - anaconda
   - conda-forge
