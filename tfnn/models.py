@@ -1,14 +1,14 @@
 import tensorflow as tf
 from tensorflow.python.framework import ops
 from tfnn.initializations import create_placeholders
-from tfnn.initializations import initialize_parameters
+from tfnn.initializations import initialize_parameters_xavier
 from tfnn.forward_prop import forward_propagation
 from tfnn.forward_prop import compute_cost
 from tfnn.io import random_mini_batches
 import matplotlib.pyplot as plt
 import numpy as np
 
-def model(X_train, Y_train, X_test, Y_test, learning_rate=0.0001,
+def model(X_train, Y_train, X_test, Y_test, layers_dims, learning_rate=0.0001,
           num_epochs=1500, minibatch_size=32, print_cost=True):
     """
     Implements a three-layer tensorflow neural network: LINEAR->RELU->LINEAR->RELU->LINEAR->SOFTMAX.
@@ -35,19 +35,13 @@ def model(X_train, Y_train, X_test, Y_test, learning_rate=0.0001,
     costs = []  # To keep track of the cost
 
     # Create Placeholders of shape (n_x, n_y)
-    ### START CODE HERE ### (1 line)
     X, Y = create_placeholders(n_x, n_y)
-    ### END CODE HERE ###
 
     # Initialize parameters
-    ### START CODE HERE ### (1 line)
-    parameters = initialize_parameters()
-    ### END CODE HERE ###
+    parameters = initialize_parameters_xavier(layers_dims)
 
     # Forward propagation: Build the forward propagation in the tensorflow graph
-    ### START CODE HERE ### (1 line)
     Z3 = forward_propagation(X, parameters)
-    ### END CODE HERE ###
 
     # Cost function: Add cost function to tensorflow graph
     ### START CODE HERE ### (1 line)
