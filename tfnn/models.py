@@ -41,11 +41,11 @@ def model(X_train, Y_train, X_test, Y_test, layers_dims, learning_rate=0.0001,
     parameters = initialize_parameters_xavier(layers_dims)
 
     # Forward propagation: Build the forward propagation in the tensorflow graph
-    Z3 = forward_propagation(X, parameters)
+    Z = forward_propagation(X, parameters)
 
     # Cost function: Add cost function to tensorflow graph
     ### START CODE HERE ### (1 line)
-    cost = compute_cost(Z3, Y)
+    cost = compute_cost(Z, Y)
     ### END CODE HERE ###
 
     # Backpropagation: Define the tensorflow optimizer. Use an AdamOptimizer.
